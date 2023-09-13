@@ -19,9 +19,19 @@ float getCorrectNumber(float min, float max) {
 	return result;
 }
 
+//wstring getText(wstring text) {
+//	for (auto sym : text) {
+//		if (sym == ' ')
+//			break;
+//	}
+//}
+
 void printMenu() {
 	wcout 
 		<< L"1. Добавить студента\n"
 		<< L"2. Вывести всех студентов\n"
+		<< L"3. Очистить\n"
+		<< L"4. Загрузить из файла\n"
+		<< L"5. Сохранить в файл\n"
 		<< L"Выберите: ";
 }

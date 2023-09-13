@@ -1,19 +1,24 @@
 #pragma once
+#include <fstream>
+
 class Student
 {
 public:
 	Student();
-	void readFromConsole();
-	void setFirstName(CString first_name);
+	void setFirstName(wstring first_name);
 	void setAge(int age);
-	void setLastName(CString last_name);
+	void setLastName(wstring last_name);
 
-	CString getFirstName();
-	CString getLastName();
+	wstring getFirstName();
+	wstring getLastName();
 	int getAge();
+	friend wistream& operator >> (wistream&, Student&);
+	friend wostream& operator << (wostream&, Student&);
+	friend wofstream& operator << (wofstream&, Student&);
+	friend wifstream& operator >> (wifstream&, Student&);
 private:
 	int age;
-	CString first_name;
-	CString last_name;
+	wstring first_name;
+	wstring last_name;
 };
 
