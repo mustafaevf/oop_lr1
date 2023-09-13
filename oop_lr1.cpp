@@ -28,10 +28,24 @@ int main()
         {
             std::locale::global(std::locale("Russian_Russia.1251"));
             printMenu();
-            wcout << L"Введите цифру ";
             Student student;
-            int result = getCorrectNumber(1, 10);
-
+            for (;;)
+            {
+                int menu_point = getCorrectNumber(1, 2);
+                switch (menu_point)
+                {
+                case 1:
+                    wcout << L"Добавление студента";
+                    
+                    student.readFromConsole();
+                    break;
+                case 2:
+                    wcout << L"Вывод всех студентов ";
+                    break;
+                default:
+                    break;
+                }
+            }
         }
     }
     else

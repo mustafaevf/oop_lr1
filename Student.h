@@ -3,10 +3,17 @@ class Student
 {
 public:
 	Student();
+	void readFromConsole();
+	void setFirstName(CString first_name);
+	void setAge(int age);
+	void setLastName(CString last_name);
 
+	CString getFirstName();
+	CString getLastName();
+	int getAge();
 private:
 	int age;
-	wstring first_name;
-	wstring last_name;
+	CString first_name;
+	CString last_name;
 };
 
